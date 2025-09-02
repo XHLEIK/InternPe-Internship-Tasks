@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flick-Bye</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section id="header">
+        <div class="header-content">
+            <a href="#" class="logo-container">
+                <div class="logo-design">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-shopping-bag"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="brand-name">Flick-Bye</h1>
+                        <p class="brand-slogan">Style at Every Click</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="navbar-container">
+                <ul id="navbar" class="navbar">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#shop" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item cart-item"><a href="#cart" class="nav-link cart-link"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h4>Trade-in-offer</h4>
+                <h2>Super value deals</h2>
+                <h1>On all products</h1>
+                <p>Save more with coupons & up to 70% off!</p>
+                <button class="shop-now-btn">
+                    <span>Shop Now</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="hero-image">
+                <div class="hero-bg-effect"></div>
+                <div class="model-carousel-container">
+                    <div class="carousel-wrapper">
+                        <div class="model-carousel" id="modelCarousel">
+                            <div class="model-card active">
+                                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Men's Fashion Collection" class="model-img">
+                            </div>
+                            <div class="model-card">
+                                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Women's Dress Collection" class="model-img">
+                            </div>
+                            <div class="model-card">
+                                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Casual Wear Collection" class="model-img">
+                            </div>
+                            <div class="model-card">
+                                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Women's Fashion Store" class="model-img">
+                            </div>
+                            <div class="model-card">
+                                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Designer Clothing Collection" class="model-img">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Carousel Controls -->
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev-btn" id="prevBtn">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn next-btn" id="nextBtn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators" id="carouselIndicators">
+                        <span class="indicator active" data-slide="0"></span>
+                        <span class="indicator" data-slide="1"></span>
+                        <span class="indicator" data-slide="2"></span>
+                        <span class="indicator" data-slide="3"></span>
+                        <span class="indicator" data-slide="4"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-p1">
+        <div class="features-container">
+            <h2 class="section-title">Explore Our Collections</h2>
+            <p class="section-subtitle">Discover premium fashion for every style and occasion</p>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-category="mens">
+                    <div class="feature-icon">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Men's Fashion" class="category-img">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Men's Fashion</h3>
+                        <p>Premium suits, casual wear, and accessories for the modern gentleman</p>
+                        <span class="feature-badge">500+ Items</span>
+                    </div>
+                    <div class="feature-overlay">
+                        <button class="explore-btn">Explore Now</button>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-category="womens">
+                    <div class="feature-icon">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Women's Fashion" class="category-img">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Women's Fashion</h3>
+                        <p>Elegant dresses, trendy outfits, and stunning accessories</p>
+                        <span class="feature-badge">750+ Items</span>
+                    </div>
+                    <div class="feature-overlay">
+                        <button class="explore-btn">Explore Now</button>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-category="formal">
+                    <div class="feature-icon">
+                        <img src="https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Formal Wear" class="category-img">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Formal Wear</h3>
+                        <p>Professional attire for business meetings and special occasions</p>
+                        <span class="feature-badge">300+ Items</span>
+                    </div>
+                    <div class="feature-overlay">
+                        <button class="explore-btn">Explore Now</button>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-category="casual">
+                    <div class="feature-icon">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Casual Wear" class="category-img">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Casual Wear</h3>
+                        <p>Comfortable everyday clothing for relaxed and stylish looks</p>
+                        <span class="feature-badge">600+ Items</span>
+                    </div>
+                    <div class="feature-overlay">
+                        <button class="explore-btn">Explore Now</button>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-category="sports">
+                    <div class="feature-icon">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Sportswear" class="category-img">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Sportswear</h3>
+                        <p>Athletic gear and activewear for fitness enthusiasts</p>
+                        <span class="feature-badge">400+ Items</span>
+                    </div>
+                    <div class="feature-overlay">
+                        <button class="explore-btn">Explore Now</button>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-category="accessories">
+                    <div class="feature-icon">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Accessories" class="category-img">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Accessories</h3>
+                        <p>Complete your look with premium bags, jewelry, and more</p>
+                        <span class="feature-badge">350+ Items</span>
+                    </div>
+                    <div class="feature-overlay">
+                        <button class="explore-btn">Explore Now</button>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="featured-products">
+        <div class="products-container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <p class="section-subtitle">Discover our handpicked collection of trending fashion items</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop&crop=center" alt="Classic White Shirt" class="product-img">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <button class="action-btn quick-view" title="Quick View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn add-to-cart" title="Add to Cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                                <button class="action-btn add-to-wishlist" title="Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-badge new">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Classic White Shirt</h3>
+                        <p class="product-category">Men's Casual</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(128)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹249</span>
+                            <span class="original-price">₹999</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop&crop=center" alt="Denim Jeans" class="product-img">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <button class="action-btn quick-view" title="Quick View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn add-to-cart" title="Add to Cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                                <button class="action-btn add-to-wishlist" title="Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-badge sale">Sale</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Premium Womens Cargo</h3>
+                        <p class="product-category">Women's Casual</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-count">(94)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹649</span>
+                            <span class="original-price">₹899</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=500&fit=crop&crop=center" alt="Summer Dress" class="product-img">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <button class="action-btn quick-view" title="Quick View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn add-to-cart" title="Add to Cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                                <button class="action-btn add-to-wishlist" title="Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-badge trending">Trending</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Summer Dress</h3>
+                        <p class="product-category">Women's Casual</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(156)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹999</span>
+                            <span class="original-price">₹1,899</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1520975954732-35dd22299614?w=400&h=500&fit=crop&crop=center" alt="Leather Jacket" class="product-img">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <button class="action-btn quick-view" title="Quick View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn add-to-cart" title="Add to Cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                                <button class="action-btn add-to-wishlist" title="Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-badge premium">Premium</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Leather Biker Jacket</h3>
+                        <p class="product-category">Unisex Outerwear</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(87)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹1,499</span>
+                            <span class="original-price">₹4,499</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=400&h=500&fit=crop&crop=center" alt="Sneakers" class="product-img">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <button class="action-btn quick-view" title="Quick View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn add-to-cart" title="Add to Cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                                <button class="action-btn add-to-wishlist" title="Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-badge bestseller">Bestseller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">White Formal Shirt</h3>
+                        <p class="product-category">Unisex Clothing</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="rating-count">(203)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹599</span>
+                            <span class="original-price">₹1,099</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1564557287817-3785e38ec1f5?w=400&h=500&fit=crop&crop=center" alt="Blazer" class="product-img">
+                        <div class="product-overlay">
+                            <div class="product-actions">
+                                <button class="action-btn quick-view" title="Quick View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn add-to-cart" title="Add to Cart">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                                <button class="action-btn add-to-wishlist" title="Add to Wishlist">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-badge new">New</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Cozy Gray Hoodie</h3>
+                        <p class="product-category">Winter Wear</p>
+                        <div class="product-rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">(76)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₹899</span>
+                            <span class="original-price">₹1,799</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+            <div class="view-all-container">
+                <button class="view-all-btn">
+                    <span>View All Products</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <div class="cta-badge">
+                    <i class="fas fa-fire"></i>
+                    <span>Limited Time Offer</span>
+                </div>
+                
+                <h2 class="cta-title">Mega Sale Alert!</h2>
+                <div class="discount-display">
+                    <span class="discount-number">70</span>
+                    <span class="percent-symbol">%</span>
+                    <span class="off-text">OFF</span>
+                </div>
+                <p class="cta-description">Don't miss out on our biggest sale of the year! Get up to 70% off on all premium clothing items.</p>
+                
+                <div class="cta-features">
+                    <div class="feature-item">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Free Shipping</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-undo"></i>
+                        <span>Easy Returns</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Payment</span>
+                    </div>
+                </div>
+                
+                <div class="cta-timer">
+                    <div class="timer-label">Hurry! Offer ends in:</div>
+                    <div class="countdown">
+                        <div class="time-unit">
+                            <span class="time-number" id="days">05</span>
+                            <span class="time-label">Days</span>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-unit">
+                            <span class="time-number" id="hours">12</span>
+                            <span class="time-label">Hours</span>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-unit">
+                            <span class="time-number" id="minutes">30</span>
+                            <span class="time-label">Minutes</span>
+                        </div>
+                        <div class="time-separator">:</div>
+                        <div class="time-unit">
+                            <span class="time-number" id="seconds">45</span>
+                            <span class="time-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <button class="cta-primary-btn">
+                        <span>Shop Now & Save</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="cta-secondary-btn">
+                        <i class="fas fa-tags"></i>
+                        <span>View All Deals</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="cta-image">
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=700&fit=crop&crop=center" alt="Sale Fashion" class="cta-img">
+                    <div class="image-overlay">
+                        <div class="sale-badge">
+                            <span class="sale-text">MEGA</span>
+                            <span class="sale-sub">SALE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text Banner Section -->
+    <section id="text-banner-section">
+        <div class="banner-container">
+            <div class="banner-grid">
+                <!-- Top Row - 2 Big Sections -->
+                <div class="banner-item banner-large banner-1">
+                    <div class="banner-content">
+                        <h3 class="banner-title">Premium Quality</h3>
+                        <p class="banner-subtitle">Crafted with Excellence</p>
+                        <p class="banner-description">Every piece is made with the finest materials and attention to detail.</p>
+                        <div class="banner-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="banner-item banner-large banner-2">
+                    <div class="banner-content">
+                        <h3 class="banner-title">Global Shipping</h3>
+                        <p class="banner-subtitle">Worldwide Delivery</p>
+                        <p class="banner-description">We deliver to over 100+ countries with express shipping options.</p>
+                        <div class="banner-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bottom Row - 3 Small Sections -->
+                <div class="banner-item banner-small banner-3">
+                    <div class="banner-content">
+                        <h4 class="banner-title">24/7 Support</h4>
+                        <p class="banner-subtitle">Always Here</p>
+                        <div class="banner-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="banner-item banner-small banner-4">
+                    <div class="banner-content">
+                        <h4 class="banner-title">Secure Payment</h4>
+                        <p class="banner-subtitle">100% Safe</p>
+                        <div class="banner-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="banner-item banner-small banner-5">
+                    <div class="banner-content">
+                        <h4 class="banner-title">Easy Returns</h4>
+                        <p class="banner-subtitle">Hassle Free</p>
+                        <div class="banner-icon">
+                            <i class="fas fa-undo-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section id="newsletter-section">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <div class="newsletter-header">
+                    <div class="newsletter-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h2 class="newsletter-title">Stay in the Loop</h2>
+                    <p class="newsletter-subtitle">Subscribe to our newsletter and be the first to know about new arrivals, exclusive deals, and fashion trends!</p>
+                </div>
+                
+                <div class="newsletter-form">
+                    <form class="subscription-form" id="newsletter-form">
+                        <div class="input-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-envelope input-icon"></i>
+                                <input 
+                                    type="email" 
+                                    class="email-input" 
+                                    placeholder="Enter your email address" 
+                                    required
+                                    id="email-input"
+                                >
+                            </div>
+                            <button type="submit" class="signup-btn">
+                                <span>Sign Up</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="newsletter-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-gift"></i>
+                                <span>Exclusive Offers</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-star"></i>
+                                <span>Early Access</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-bell"></i>
+                                <span>Trend Alerts</span>
+                            </div>
+                        </div>
+                        
+                        <p class="privacy-text">
+                            <i class="fas fa-shield-alt"></i>
+                            We respect your privacy. Unsubscribe at any time.
+                        </p>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="newsletter-decoration">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer-section">
+        <div class="footer-container">
+            <!-- Main Footer Content -->
+            <div class="footer-main">
+                <div class="footer-content">
+                    <!-- Brand Section -->
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <div class="logo-design">
+                                <div class="logo-icon">
+                                    <i class="fa-solid fa-shopping-bag"></i>
+                                </div>
+                                <div class="logo-text">
+                                    <h1 class="brand-name">Flick-Bye</h1>
+                                    <p class="brand-slogan">Style at Every Click</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="footer-description">
+                            Discover the latest fashion trends and timeless classics. Your one-stop destination for premium clothing that defines your unique style.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-links">
+                        <h3 class="footer-title">Quick Links</h3>
+                        <ul class="links-list">
+                            <li><a href="#" class="footer-link">Home</a></li>
+                            <li><a href="#" class="footer-link">Shop</a></li>
+                            <li><a href="#" class="footer-link">About Us</a></li>
+                            <li><a href="#" class="footer-link">Contact</a></li>
+                            <li><a href="#" class="footer-link">Blog</a></li>
+                            <li><a href="#" class="footer-link">Size Guide</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="footer-links">
+                        <h3 class="footer-title">Categories</h3>
+                        <ul class="links-list">
+                            <li><a href="#" class="footer-link">Men's Fashion</a></li>
+                            <li><a href="#" class="footer-link">Women's Fashion</a></li>
+                            <li><a href="#" class="footer-link">Kids Collection</a></li>
+                            <li><a href="#" class="footer-link">Accessories</a></li>
+                            <li><a href="#" class="footer-link">Footwear</a></li>
+                            <li><a href="#" class="footer-link">Sale Items</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Customer Service -->
+                    <div class="footer-links">
+                        <h3 class="footer-title">Customer Service</h3>
+                        <ul class="links-list">
+                            <li><a href="#" class="footer-link">Help Center</a></li>
+                            <li><a href="#" class="footer-link">Track Your Order</a></li>
+                            <li><a href="#" class="footer-link">Returns & Exchanges</a></li>
+                            <li><a href="#" class="footer-link">Shipping Info</a></li>
+                            <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                            <li><a href="#" class="footer-link">Terms of Service</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="footer-contact">
+                        <h3 class="footer-title">Get in Touch</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="contact-details">
+                                    <strong>Address</strong>
+                                    <span>123 Fashion Street, Style City, SC 12345</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div class="contact-details">
+                                    <strong>Phone</strong>
+                                    <span>+1 (555) 123-4567</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="contact-details">
+                                    <strong>Email</strong>
+                                    <span>hello@flickbye.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="footer-payment">
+                <div class="payment-container">
+                    <div class="payment-text">
+                        <h4>Secure Payment Methods</h4>
+                        <p>Your payment information is safe and secure</p>
+                    </div>
+                    <div class="payment-methods">
+                        <div class="payment-card">
+                            <i class="fab fa-cc-visa"></i>
+                        </div>
+                        <div class="payment-card">
+                            <i class="fab fa-cc-mastercard"></i>
+                        </div>
+                        <div class="payment-card">
+                            <i class="fab fa-cc-amex"></i>
+                        </div>
+                        <div class="payment-card">
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                        <div class="payment-card">
+                            <i class="fab fa-apple-pay"></i>
+                        </div>
+                        <div class="payment-card">
+                            <i class="fab fa-google-pay"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2025 Flick-Bye. All rights reserved. Made with <i class="fas fa-heart"></i> for fashion lovers.</p>
+                    </div>
+                    <div class="footer-bottom-links">
+                        <a href="#" class="bottom-link">Privacy Policy</a>
+                        <a href="#" class="bottom-link">Terms of Service</a>
+                        <a href="#" class="bottom-link">Cookie Policy</a>
+                        <a href="#" class="bottom-link">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </footer>
+
+
+</body>
+<script src="script.js"></script>
+</html>
