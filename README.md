@@ -1,18 +1,9 @@
+
 # 🚀 InternPe Internship Tasks
 
 <div align="center">
 
-![InternPe Logo](ht**Features**:
-- 🛍️ **Complete E-commerce Experience**: Professional product catalog with INR pricing
-- 🛒 **Shopping Cart**: Advanced cart functionality with smooth interactions
-- 🎨 **Modern UI Design**: Glassmorphism effects, gradients, and animations
-- 📱 **Mobile-First Responsive**: Hamburger navigation and adaptive layouts
-- ⚡ **Interactive Elements**: Auto-playing carousel, smooth scrolling, animations
-- 💌 **Newsletter System**: Email subscription with validation
-- 🎯 **Promotional Sections**: 70% off deals with countdown timer.shields.io/badge/InternPe-Internship-blue?style=for-the-badge&logo=rocket)
 ![Tasks Completed](https://img.shields.io/badge/Tasks%20Completed-2-brightgreen?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
-
 </div>
 
 ## 📖 About
@@ -23,10 +14,10 @@ This repository contains all the tasks and projects completed during my **Intern
 
 - **Program**: InternPe Internship
 - **Domain**: Web Development
-- **Duration**: August 2025 - September 2025
+- **Duration**: 8 Weeks
 - **Mentor**: InternPe Team
-- **Start Date**: August 29, 2025
-- **Completion Date**: September 3, 2025
+- **Start Date**: August 25, 2025
+- **Completion Date**: October 10, 2025
 
 ## 📋 Tasks Overview
 
@@ -70,11 +61,7 @@ This internship consisted of two comprehensive tasks designed to enhance web dev
 
 **Live Demo**: [View Project Files](./Task%201(Calculator)/)
 
-**Screenshots**:
-```
-📸 Calculator Interface with dark theme
-📸 Responsive design on different screen sizes
-```
+
 
 ---
 
@@ -118,12 +105,7 @@ This internship consisted of two comprehensive tasks designed to enhance web dev
 
 **Live Demo**: [View Project Files](./Task%202(E-commerce)/)
 
-**Screenshots**:
-```
-🛒 Modern "Flick-Bye" e-commerce homepage with glassmorphism UI
-📱 Responsive hamburger navigation and mobile-first design
-🎨 Interactive carousel showcase and promotional sections
-```
+
 
 ---
 
@@ -263,9 +245,9 @@ This repository is part of my internship journey. However, if you have suggestio
 
 ## 📞 Contact
 
-- **Name**: [Your Name]
-- **Email**: [Your Email]
-- **LinkedIn**: [Your LinkedIn Profile]
+- **Name**: Subham Bose
+- **Email**: subhooo224@gmail.com
+- **LinkedIn**:  <a href="https://www.linkedin.com/in/subham-bose-ba4130350/">Subham Bose</a>
 - **GitHub**: [@XHLEIK](https://github.com/XHLEIK)
 
 ## 📄 License
@@ -276,12 +258,7 @@ This project is part of an educational internship program. Feel free to use the 
 
 <div align="center">
 
-**🎉 INTERNSHIP COMPLETED SUCCESSFULLY 🎉**
-
-**⭐ If you found this helpful, please give it a star! ⭐**
-
-**Completion Date**: September 3, 2025
-
+**⭐ If you found this helpful, please give it a star! ⭐**<br>
 Made with ❤️ during InternPe Internship
 
 </div>
@@ -295,7 +272,6 @@ Made with ❤️ during InternPe Internship
   - 🎨 Implemented advanced UI with glassmorphism effects and animations
   - 📱 Added mobile-first responsive design with hamburger navigation
   - ⚡ Built complex JavaScript functionality (1000+ lines)
-  - 🏆 **INTERNSHIP COMPLETED SUCCESSFULLY**
 - **September 2, 2025**: 
   - 🔄 Continued Task 2 development with mobile navigation features
   - 📝 Enhanced project documentation and technical specifications
