@@ -3,7 +3,7 @@
 <div align="center">
 
 ![InternPe Logo](https://img.shields.io/badge/InternPe-Internship-blue?style=for-the-badge&logo=rocket)
-![Tasks Completed](https://img.shields.io/badge/Tasks%20Completed-1-green?style=for-the-badge)
+![Tasks Completed](https://img.shields.io/badge/Tasks%20Completed-2-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-orange?style=for-the-badge)
 
 </div>
@@ -15,10 +15,10 @@ This repository contains all the tasks and projects completed during my **Intern
 ## 🎯 Internship Overview
 
 - **Program**: InternPe Internship
-- **Duration**: [Add your internship duration]
+- **Duration**: August 2025 - September 2025
 - **Domain**: Web Development
-- **Mentor**: [Add mentor name if applicable]
-- **Start Date**: [Add start date]
+- **Mentor**: InternPe Team
+- **Start Date**: August 29, 2025
 
 ## 📋 Tasks Overview
 
@@ -68,15 +68,52 @@ This internship consists of multiple tasks designed to enhance web development s
 
 ---
 
+### ✅ Task 2: E-Commerce Website
+
+**Description**: A comprehensive e-commerce platform built with HTML, CSS, and JavaScript featuring a complete shopping experience.
+
+**Features**:
+- 🛍️ Product catalog with categories and search functionality
+- � Shopping cart with persistent storage
+- 💳 Complete checkout process simulation
+- 👤 User authentication system
+- 📱 Fully responsive design for all devices
+- 🎨 Modern UI with professional e-commerce aesthetics
+- 🔍 Advanced search and filtering capabilities
+- ⭐ Product reviews and ratings system
+
+**Technologies Used**:
+- HTML5 (Semantic structure)
+- CSS3 (Grid, Flexbox, Animations)
+- Vanilla JavaScript (ES6+)
+- Local Storage API
+- Responsive Web Design
+
+**Key Learning Outcomes**:
+- E-commerce application development
+- Complex state management with JavaScript
+- Local storage and data persistence
+- Advanced CSS layouts and animations
+- User experience design for shopping platforms
+
+**Status**: 🔄 In Development (Due: September 2, 2025)
+
+**Live Demo**: [Coming Soon]
+
+**Screenshots**:
+```
+🛒 Modern e-commerce homepage with product showcase
+📱 Responsive shopping cart and checkout process
+🔍 Advanced search and product filtering interface
+```
+
+---
+
 ## 🚀 Upcoming Tasks
 
-### 🔜 Task 2: [Task Name]
+### 🔜 Task 3: [Coming Soon]
 - **Status**: Pending
-- **Description**: [Task description will be added]
-
-### 🔜 Task 3: [Task Name]
-- **Status**: Pending
-- **Description**: [Task description will be added]
+- **Description**: [Next task details will be updated soon]
 
 ---
 
@@ -101,9 +138,14 @@ InternPe-Internship-Tasks/
 ├── Task 1(Calculator)/
 │   ├── index.html          # Main HTML structure
 │   ├── script.js           # JavaScript functionality
-│   └── style.css           # CSS styling
+│   ├── style.css           # CSS styling
+│   └── README.md           # Task documentation
 │
-├── Task 2/                 # [Coming Soon]
+├── Task 2(E-commerce)/
+│   ├── index.html          # E-commerce homepage
+│   ├── script.js           # Shopping functionality
+│   ├── style.css           # E-commerce styling
+│   └── README.md           # Task documentation
 │
 ├── Task 3/                 # [Coming Soon]
 │
@@ -128,18 +170,33 @@ InternPe-Internship-Tasks/
    - Simply open `index.html` in your preferred web browser
    - Or use a live server extension in VS Code
 
+### Task 2: E-Commerce Website
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/XHLEIK/InternPe-Internship-Tasks.git
+   ```
+
+2. **Navigate to Task 2 folder**:
+   ```bash
+   cd "InternPe-Internship-Tasks/Task 2(E-commerce)"
+   ```
+
+3. **Open in browser**:
+   - Simply open `index.html` in your preferred web browser
+   - Or use a live server extension in VS Code
+
 4. **Usage**:
-   - Click on numbers to input values
-   - Use operation buttons (+, -, *, /) for calculations
-   - Press "=" to get the result
-   - Use "AC" to clear all
-   - Use "DE" to delete the last character
+   - Browse products and categories
+   - Add items to shopping cart
+   - Use search and filter features
+   - Experience the checkout process
 
 ## 📈 Progress Tracking
 
-- [x] **Task 1**: Calculator ✅ (Completed - August 29, 2025)
-- [ ] **Task 2**: [Task Name] ⏳ (In Progress)
-- [ ] **Task 3**: [Task Name] ⏳ (Pending)
+- [x] **Task 1**: Calculator ✅ (Completed - August 30, 2025)
+- [x] **Task 2**: E-Commerce Website 🔄 (In Progress - Due September 2, 2025)
+- [ ] **Task 3**: [Coming Soon] ⏳ (Pending)
 
 ## 🎯 Learning Goals
 
@@ -187,7 +244,11 @@ Made with ❤️ during InternPe Internship
 
 ## 📝 Updates Log
 
-- **August 29, 2025**: 
+- **September 2, 2025**: 
+  - 🔄 Started Task 2: E-Commerce Website
+  - 📝 Updated README files with comprehensive documentation
+  - 🎨 Enhanced project documentation and visual presentation
+- **August 30, 2025**: 
   - ✅ Completed Task 1: Calculator
   - 📝 Initial repository setup
   - 📄 Created comprehensive README documentation
