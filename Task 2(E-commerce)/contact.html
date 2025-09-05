@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Flick-Bye</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header Section -->
+    <section id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo-container">
+                <div class="logo-design">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-shopping-bag"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="brand-name">Flick-Bye</h1>
+                        <p class="brand-slogan">Style at Every Click</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="navbar-container">
+                <ul id="navbar" class="navbar">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                    <li class="nav-item cart-item"><a href="cart.html" class="nav-link cart-link">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contact Hero Section -->
+    <section id="contact-hero">
+        <div class="contact-hero-container">
+            <div class="contact-hero-content">
+                <span class="contact-badge">💬 Get in Touch</span>
+                <h1 class="contact-title">Contact Us</h1>
+                <p class="contact-subtitle">We'd love to hear from you! Whether you have questions about our products, need customer support, or want to provide feedback, we're here to help.</p>
+                <div class="contact-highlights">
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-reply"></i>
+                        <span>Quick Response</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fa-solid fa-shield-heart"></i>
+                        <span>Trusted Service</span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-hero-image">
+                <div class="hero-illustration">
+                    <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Customer Support" class="hero-img">
+                    <div class="floating-elements">
+                        <div class="floating-icon email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="floating-icon phone">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="floating-icon chat">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods Section -->
+    <section id="contact-methods">
+        <div class="methods-container">
+            <div class="section-header">
+                <span class="section-badge">📞 Connect</span>
+                <h2 class="section-title">Multiple Ways to Reach Us</h2>
+                <p class="section-subtitle">Choose the method that works best for you</p>
+            </div>
+            <div class="methods-grid">
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="method-title">Call Us</h3>
+                    <p class="method-description">Speak directly with our customer service team for immediate assistance.</p>
+                    <div class="method-details">
+                        <div class="detail-item">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Mon-Fri: 9AM-8PM EST</span>
+                        </div>
+                    </div>
+                    <button class="method-btn">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Call Now</span>
+                    </button>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3 class="method-title">Email Support</h3>
+                    <p class="method-description">Send us detailed inquiries and we'll respond within 24 hours.</p>
+                    <div class="method-details">
+                        <div class="detail-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>support@flickbye.com</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-reply"></i>
+                            <span>Response within 24hrs</span>
+                        </div>
+                    </div>
+                    <button class="method-btn">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Send Email</span>
+                    </button>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="method-title">Live Chat</h3>
+                    <p class="method-description">Get instant help through our live chat support system.</p>
+                    <div class="method-details">
+                        <div class="detail-item">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Instant Response</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-user-headset"></i>
+                            <span>Available 24/7</span>
+                        </div>
+                    </div>
+                    <button class="method-btn">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>Start Chat</span>
+                    </button>
+                </div>
+
+                <div class="method-card">
+                    <div class="method-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="method-title">Visit Store</h3>
+                    <p class="method-description">Come to our flagship store for a personalized shopping experience.</p>
+                    <div class="method-details">
+                        <div class="detail-item">
+                            <i class="fa-solid fa-map-pin"></i>
+                            <span>123 Fashion Street, Style City</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Mon-Sun: 10AM-9PM</span>
+                        </div>
+                    </div>
+                    <button class="method-btn">
+                        <i class="fa-solid fa-directions"></i>
+                        <span>Get Directions</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form">
+        <div class="form-container">
+            <div class="form-content">
+                <div class="form-header">
+                    <span class="section-badge">✉️ Message</span>
+                    <h2 class="section-title">Send us a Message</h2>
+                    <p class="section-subtitle">Fill out the form below and we'll get back to you as soon as possible</p>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-input" required>
+                            <div class="form-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" class="form-input" required>
+                            <div class="form-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                            <div class="form-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
+                            <div class="form-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject *</label>
+                        <select id="subject" name="subject" class="form-select" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Customer Support</option>
+                            <option value="order">Order Questions</option>
+                            <option value="returns">Returns & Exchanges</option>
+                            <option value="partnerships">Business Partnerships</option>
+                            <option value="feedback">Feedback & Suggestions</option>
+                        </select>
+                        <div class="form-icon">
+                            <i class="fa-solid fa-list"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message *</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox">
+                        <label for="newsletter" class="checkbox-label">
+                            <span class="checkbox-custom"></span>
+                            Subscribe to our newsletter for updates and exclusive offers
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <div class="btn-loading">
+                            <div class="spinner"></div>
+                        </div>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <div class="info-card">
+                    <h3 class="info-title">Need Immediate Help?</h3>
+                    <p class="info-description">For urgent matters, don't hesitate to contact us directly.</p>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <span class="info-label">Emergency Line</span>
+                                <span class="info-value">+1 (555) 911-HELP</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <span class="info-label">Priority Support</span>
+                                <span class="info-value">urgent@flickbye.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <h3 class="info-title">Business Hours</h3>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span class="day">Monday - Friday</span>
+                            <span class="time">9:00 AM - 8:00 PM EST</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Saturday</span>
+                            <span class="time">10:00 AM - 6:00 PM EST</span>
+                        </div>
+                        <div class="hours-item">
+                            <span class="day">Sunday</span>
+                            <span class="time">12:00 PM - 5:00 PM EST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq-section">
+        <div class="faq-container">
+            <div class="section-header">
+                <span class="section-badge">❓ Help</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Quick answers to common questions</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does shipping take?</h3>
+                        <button class="faq-toggle">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standard shipping takes 5-7 business days. Express shipping (2-3 days) and overnight shipping options are also available at checkout.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is your return policy?</h3>
+                        <button class="faq-toggle">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a 30-day return policy for unworn items in original condition with tags attached. Returns are free for defective items.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer international shipping?</h3>
+                        <button class="faq-toggle">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we ship to over 50 countries worldwide. International shipping costs and delivery times vary by location.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I track my order?</h3>
+                        <button class="faq-toggle">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Once your order ships, you'll receive a tracking number via email. You can also track orders in your account dashboard.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What payment methods do you accept?</h3>
+                        <button class="faq-toggle">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards, PayPal, Apple Pay, Google Pay, and offer buy-now-pay-later options through Klarna and Afterpay.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you have a size guide?</h3>
+                        <button class="faq-toggle">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, each product page includes detailed size charts. We also offer free exchanges if the size doesn't fit perfectly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location-section">
+        <div class="location-container">
+            <div class="location-info">
+                <span class="section-badge">📍 Visit</span>
+                <h2 class="section-title">Our Flagship Store</h2>
+                <p class="location-description">Experience Flick-Bye in person at our beautiful flagship store in the heart of Style City's fashion district.</p>
+                
+                <div class="location-details">
+                    <div class="location-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span class="location-label">Address</span>
+                            <span class="location-value">123 Fashion Street, Style City, SC 12345</span>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <span class="location-label">Store Phone</span>
+                            <span class="location-value">+1 (555) 123-SHOP</span>
+                        </div>
+                    </div>
+                    <div class="location-item">
+                        <i class="fa-solid fa-parking"></i>
+                        <div>
+                            <span class="location-label">Parking</span>
+                            <span class="location-value">Free parking available</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="store-features">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-shirt"></i>
+                        <span>Personal Styling</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-scissors"></i>
+                        <span>Alterations</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-gift"></i>
+                        <span>Gift Wrapping</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fa-solid fa-map"></i>
+                    <h3>Interactive Map</h3>
+                    <p>Map integration coming soon</p>
+                    <button class="map-btn">
+                        <i class="fa-solid fa-directions"></i>
+                        <span>Get Directions</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <section id="footer-section">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Brand Column -->
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <i class="fa-solid fa-shopping-bag"></i>
+                            <h3>Flick-Bye</h3>
+                        </div>
+                        <p class="footer-description">Your premier destination for fashion and lifestyle products. Style at every click.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories Column -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#men">Men's Fashion</a></li>
+                        <li><a href="#women">Women's Fashion</a></li>
+                        <li><a href="#formal">Formal Wear</a></li>
+                        <li><a href="#casual">Casual Wear</a></li>
+                        <li><a href="#sports">Sports Wear</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Get in Touch</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>123 Fashion Street, Style City, SC 12345</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@flickbye.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Flick-Bye. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#cookies">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="cart-simple.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>
