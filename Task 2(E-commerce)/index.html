@@ -32,11 +32,14 @@
             <!-- Navigation Menu -->
             <nav class="navbar-container">
                 <ul id="navbar" class="navbar">
-                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-                    <li class="nav-item"><a href="#shop" class="nav-link">Shop</a></li>
-                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                    <li class="nav-item cart-item"><a href="#cart" class="nav-link cart-link"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="shop.html" class="nav-link">Shop</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item cart-item"><a href="cart.html" class="nav-link cart-link">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a></li>
                 </ul>
             </nav>
         </div>
@@ -44,59 +47,126 @@
 
     <!-- Hero Section -->
     <section id="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h4>Trade-in-offer</h4>
-                <h2>Super value deals</h2>
-                <h1>On all products</h1>
-                <p>Save more with coupons & up to 70% off!</p>
-                <button class="shop-now-btn">
-                    <span>Shop Now</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-            <div class="hero-image">
-                <div class="hero-bg-effect"></div>
-                <div class="model-carousel-container">
-                    <div class="carousel-wrapper">
-                        <div class="model-carousel" id="modelCarousel">
-                            <div class="model-card active">
-                                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Men's Fashion Collection" class="model-img">
-                            </div>
-                            <div class="model-card">
-                                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Women's Dress Collection" class="model-img">
-                            </div>
-                            <div class="model-card">
-                                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Casual Wear Collection" class="model-img">
-                            </div>
-                            <div class="model-card">
-                                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Women's Fashion Store" class="model-img">
-                            </div>
-                            <div class="model-card">
-                                <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Designer Clothing Collection" class="model-img">
-                            </div>
+        <div class="hero-slider-container">
+            <div class="hero-slides-wrapper" id="heroSlidesWrapper">
+                <!-- Slide 1: Trade-in Offer -->
+                <div class="hero-slide active">
+                    <div class="hero-container">
+                        <div class="hero-content">
+                            <span class="offer-badge">🎯 Limited Time</span>
+                            <h4>Trade-in-offer</h4>
+                            <h2>Super value deals</h2>
+                            <h1>On all products</h1>
+                            <p>Save more with coupons & up to 70% off!</p>
+                            <button class="shop-now-btn">
+                                <span>Shop Now</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Fashion Collection" class="hero-img">
                         </div>
                     </div>
-                    
-                    <!-- Carousel Controls -->
-                    <div class="carousel-controls">
-                        <button class="carousel-btn prev-btn" id="prevBtn">
-                            <i class="fa-solid fa-chevron-left"></i>
-                        </button>
-                        <button class="carousel-btn next-btn" id="nextBtn">
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </button>
-                    </div>
-                    
-                    <!-- Carousel Indicators -->
-                    <div class="carousel-indicators" id="carouselIndicators">
-                        <span class="indicator active" data-slide="0"></span>
-                        <span class="indicator" data-slide="1"></span>
-                        <span class="indicator" data-slide="2"></span>
-                        <span class="indicator" data-slide="3"></span>
-                        <span class="indicator" data-slide="4"></span>
+                </div>
+
+                <!-- Slide 2: Flash Sale -->
+                <div class="hero-slide">
+                    <div class="hero-container">
+                        <div class="hero-content">
+                            <span class="offer-badge">⚡ Flash Sale</span>
+                            <h4>24 Hour Deal</h4>
+                            <h2>Up to 80% Off</h2>
+                            <h1>Fashion Clearance</h1>
+                            <p>Don't miss out! Limited stock available</p>
+                            <button class="shop-now-btn">
+                                <span>Grab Deal</span>
+                                <i class="fa-solid fa-bolt"></i>
+                            </button>
+                        </div>
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Flash Sale" class="hero-img">
+                        </div>
                     </div>
                 </div>
+
+                <!-- Slide 3: Free Shipping -->
+                <div class="hero-slide">
+                    <div class="hero-container">
+                        <div class="hero-content">
+                            <span class="offer-badge">🚚 Free Delivery</span>
+                            <h4>No Shipping Costs</h4>
+                            <h2>Free shipping</h2>
+                            <h1>On orders $50+</h1>
+                            <p>Fast delivery to your doorstep worldwide</p>
+                            <button class="shop-now-btn">
+                                <span>Order Now</span>
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </button>
+                        </div>
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Free Shipping" class="hero-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: New Arrivals -->
+                <div class="hero-slide">
+                    <div class="hero-container">
+                        <div class="hero-content">
+                            <span class="offer-badge">✨ New Collection</span>
+                            <h4>Fresh & Trendy</h4>
+                            <h2>New arrivals</h2>
+                            <h1>Spring Collection</h1>
+                            <p>Discover the latest fashion trends this season</p>
+                            <button class="shop-now-btn">
+                                <span>Explore</span>
+                                <i class="fa-solid fa-sparkles"></i>
+                            </button>
+                        </div>
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="New Arrivals" class="hero-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: Member Benefits -->
+                <div class="hero-slide">
+                    <div class="hero-container">
+                        <div class="hero-content">
+                            <span class="offer-badge">👑 VIP Access</span>
+                            <h4>Exclusive Benefits</h4>
+                            <h2>Join our club</h2>
+                            <h1>Get 15% off</h1>
+                            <p>Early access to sales & exclusive member perks</p>
+                            <button class="shop-now-btn">
+                                <span>Join Now</span>
+                                <i class="fa-solid fa-crown"></i>
+                            </button>
+                        </div>
+                        <div class="hero-image">
+                            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="VIP Membership" class="hero-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <div class="hero-nav-arrows">
+                <button class="hero-arrow prev-arrow" id="heroPrevBtn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="hero-arrow next-arrow" id="heroNextBtn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Slide Indicators -->
+            <div class="hero-indicators" id="heroIndicators">
+                <span class="hero-indicator active" data-slide="0"></span>
+                <span class="hero-indicator" data-slide="1"></span>
+                <span class="hero-indicator" data-slide="2"></span>
+                <span class="hero-indicator" data-slide="3"></span>
+                <span class="hero-indicator" data-slide="4"></span>
             </div>
         </div>
     </section>
@@ -207,7 +277,7 @@
             
             <div class="products-grid">
                 <!-- Product 1 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="prod1">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop&crop=center" alt="Classic White Shirt" class="product-img">
                         <div class="product-overlay">
@@ -246,7 +316,7 @@
                 </div>
 
                 <!-- Product 2 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="prod2">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=500&fit=crop&crop=center" alt="Denim Jeans" class="product-img">
                         <div class="product-overlay">
@@ -285,7 +355,7 @@
                 </div>
 
                 <!-- Product 3 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="prod3">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=500&fit=crop&crop=center" alt="Summer Dress" class="product-img">
                         <div class="product-overlay">
@@ -324,7 +394,7 @@
                 </div>
 
                 <!-- Product 4 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="prod4">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1520975954732-35dd22299614?w=400&h=500&fit=crop&crop=center" alt="Leather Jacket" class="product-img">
                         <div class="product-overlay">
@@ -363,7 +433,7 @@
                 </div>
 
                 <!-- Product 5 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="prod5">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1603252109303-2751441dd157?w=400&h=500&fit=crop&crop=center" alt="Sneakers" class="product-img">
                         <div class="product-overlay">
@@ -402,7 +472,7 @@
                 </div>
 
                 <!-- Product 6 -->
-                <div class="product-card">
+                <div class="product-card" data-product-id="prod6">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1564557287817-3785e38ec1f5?w=400&h=500&fit=crop&crop=center" alt="Blazer" class="product-img">
                         <div class="product-overlay">
@@ -444,7 +514,8 @@
 
             <div class="view-all-container">
                 <button class="view-all-btn">
-                    <span>View All Products</span>
+                    
+                    <a href="shop.html" class="nav-link">View All Products</a>
                     <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
@@ -705,10 +776,10 @@
                     <div class="footer-links">
                         <h3 class="footer-title">Quick Links</h3>
                         <ul class="links-list">
-                            <li><a href="#" class="footer-link">Home</a></li>
-                            <li><a href="#" class="footer-link">Shop</a></li>
-                            <li><a href="#" class="footer-link">About Us</a></li>
-                            <li><a href="#" class="footer-link">Contact</a></li>
+                            <li><a href="index.html" class="footer-link">Home</a></li>
+                            <li><a href="shop.html" class="footer-link">Shop</a></li>
+                            <li><a href="about.html" class="footer-link">About Us</a></li>
+                            <li><a href="contact.html" class="footer-link">Contact</a></li>
                             <li><a href="#" class="footer-link">Blog</a></li>
                             <li><a href="#" class="footer-link">Size Guide</a></li>
                         </ul>
@@ -822,7 +893,25 @@
         </div>
     </footer>
 
-
 </body>
 <script src="script.js"></script>
+<script src="cart-simple.js"></script>
+<script>
+// Initialize cart badge on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize cart badge
+    if (window.cartManager) {
+        cartManager.updateCartBadge();
+    } else {
+        // Initialize badge from localStorage
+        const cart = JSON.parse(localStorage.getItem('fashionStoreCart') || '[]');
+        const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
+        const badge = document.getElementById('cartCount');
+        if (badge) {
+            badge.textContent = itemCount;
+            badge.className = itemCount > 0 ? 'cart-count' : 'cart-count empty';
+        }
+    }
+});
+</script>
 </html>
