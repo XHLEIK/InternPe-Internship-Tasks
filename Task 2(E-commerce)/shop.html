@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Flick-Bye</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Header Section -->
+    <section id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo-container">
+                <div class="logo-design">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-shopping-bag"></i>
+                    </div>
+                    <div class="logo-text">
+                        <h1 class="brand-name">Flick-Bye</h1>
+                        <p class="brand-slogan">Style at Every Click</p>
+                    </div>
+                </div>
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="navbar-container">
+                <ul id="navbar" class="navbar">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="shop.html" class="nav-link active">Shop</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item cart-item"><a href="cart.html" class="nav-link cart-link">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Shop Hero Section -->
+    <section id="shop-hero">
+        <div class="shop-hero-slider-container">
+            <div class="shop-hero-slides-wrapper" id="shopHeroSlidesWrapper">
+                <!-- Slide 1: Shop Collection -->
+                <div class="shop-hero-slide active">
+                    <div class="shop-hero-container">
+                        <div class="shop-hero-content">
+                            <span class="shop-offer-badge">🛍️ Discover Fashion</span>
+                            <h4>Premium Collection</h4>
+                            <h2>Shop Collection</h2>
+                            <h1>Discover Your Style</h1>
+                            <p>Explore thousands of trendy products at unbeatable prices</p>
+                            <button class="shop-browse-btn">
+                                <span>Browse Now</span>
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </button>
+                        </div>
+                        <div class="shop-hero-image">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Shop Collection" class="shop-hero-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Best Sellers -->
+                <div class="shop-hero-slide">
+                    <div class="shop-hero-container">
+                        <div class="shop-hero-content">
+                            <span class="shop-offer-badge">🔥 Trending Now</span>
+                            <h4>Customer Favorites</h4>
+                            <h2>Best Sellers</h2>
+                            <h1>Top Rated Items</h1>
+                            <p>Shop the most popular items loved by our customers</p>
+                            <button class="shop-browse-btn">
+                                <span>View Bestsellers</span>
+                                <i class="fa-solid fa-star"></i>
+                            </button>
+                        </div>
+                        <div class="shop-hero-image">
+                            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Best Sellers" class="shop-hero-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: New Arrivals -->
+                <div class="shop-hero-slide">
+                    <div class="shop-hero-container">
+                        <div class="shop-hero-content">
+                            <span class="shop-offer-badge">✨ Just Dropped</span>
+                            <h4>Fresh & New</h4>
+                            <h2>New Arrivals</h2>
+                            <h1>Latest Fashion</h1>
+                            <p>Be the first to discover our newest fashion arrivals</p>
+                            <button class="shop-browse-btn">
+                                <span>See New Items</span>
+                                <i class="fa-solid fa-sparkles"></i>
+                            </button>
+                        </div>
+                        <div class="shop-hero-image">
+                            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="New Arrivals" class="shop-hero-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Sale Items -->
+                <div class="shop-hero-slide">
+                    <div class="shop-hero-container">
+                        <div class="shop-hero-content">
+                            <span class="shop-offer-badge">💰 Big Savings</span>
+                            <h4>Special Deals</h4>
+                            <h2>Sale Items</h2>
+                            <h1>Up to 70% Off</h1>
+                            <p>Don't miss out on amazing deals and clearance items</p>
+                            <button class="shop-browse-btn">
+                                <span>Shop Sale</span>
+                                <i class="fa-solid fa-tags"></i>
+                            </button>
+                        </div>
+                        <div class="shop-hero-image">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Sale Items" class="shop-hero-img">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: Premium Collection -->
+                <div class="shop-hero-slide">
+                    <div class="shop-hero-container">
+                        <div class="shop-hero-content">
+                            <span class="shop-offer-badge">👑 Luxury Line</span>
+                            <h4>Exclusive Range</h4>
+                            <h2>Premium Collection</h2>
+                            <h1>Designer Fashion</h1>
+                            <p>Indulge in our exclusive designer collection pieces</p>
+                            <button class="shop-browse-btn">
+                                <span>Explore Premium</span>
+                                <i class="fa-solid fa-crown"></i>
+                            </button>
+                        </div>
+                        <div class="shop-hero-image">
+                            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Premium Collection" class="shop-hero-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <div class="shop-hero-nav-arrows">
+                <button class="shop-hero-arrow prev-arrow" id="shopHeroPrevBtn">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="shop-hero-arrow next-arrow" id="shopHeroNextBtn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Slide Indicators -->
+            <div class="shop-hero-indicators" id="shopHeroIndicators">
+                <span class="shop-hero-indicator active" data-slide="0"></span>
+                <span class="shop-hero-indicator" data-slide="1"></span>
+                <span class="shop-hero-indicator" data-slide="2"></span>
+                <span class="shop-hero-indicator" data-slide="3"></span>
+                <span class="shop-hero-indicator" data-slide="4"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop-section">
+        <div class="shop-container">
+            
+            <!-- Search Box -->
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fa-solid fa-search search-icon"></i>
+                    <input type="text" id="productSearch" placeholder="Search for products..." class="search-input">
+                    <button id="clearSearch" class="clear-search">
+                        <i class="fa-solid fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="category-container">
+                <h3 class="filter-title">Shop by Category</h3>
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="all">
+                        <i class="fa-solid fa-th"></i>
+                        <span>All</span>
+                    </button>
+                    <button class="category-btn" data-category="men">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Men's Fashion</span>
+                    </button>
+                    <button class="category-btn" data-category="women">
+                        <i class="fa-solid fa-female"></i>
+                        <span>Women's Fashion</span>
+                    </button>
+                    <button class="category-btn" data-category="formal">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span>Formal Wear</span>
+                    </button>
+                    <button class="category-btn" data-category="casual">
+                        <i class="fa-solid fa-tshirt"></i>
+                        <span>Casual Wear</span>
+                    </button>
+                    <button class="category-btn" data-category="sports">
+                        <i class="fa-solid fa-dumbbell"></i>
+                        <span>Sports Wear</span>
+                    </button>
+                    <button class="category-btn" data-category="accessories">
+                        <i class="fa-solid fa-gem"></i>
+                        <span>Accessories</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-section">
+                <div class="products-header">
+                    <h3 id="categoryTitle" class="category-title">All Products</h3>
+                    <div class="products-count">
+                        <span id="productsCount">0</span> products found
+                    </div>
+                </div>
+                
+                <!-- Loading Animation -->
+                <div id="loadingSpinner" class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading products...</p>
+                </div>
+
+                <!-- Products Grid -->
+                <div id="productsGrid" class="products-grid">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+
+                <!-- No Results Message -->
+                <div id="noResults" class="no-results" style="display: none;">
+                    <i class="fa-solid fa-search"></i>
+                    <h3>No Products Found</h3>
+                    <p>Try adjusting your search or browse different categories</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <div id="backToTop" class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+
+    <!-- Footer Section -->
+    <section id="footer-section">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Brand Column -->
+                <div class="footer-column">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <i class="fa-solid fa-shopping-bag"></i>
+                            <h3>Flick-Bye</h3>
+                        </div>
+                        <p class="footer-description">Your premier destination for fashion and lifestyle products. Style at every click.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#cart">Shopping Cart</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories Column -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Categories</h4>
+                    <ul class="footer-links">
+                        <li><a href="#men">Men's Fashion</a></li>
+                        <li><a href="#women">Women's Fashion</a></li>
+                        <li><a href="#formal">Formal Wear</a></li>
+                        <li><a href="#casual">Casual Wear</a></li>
+                        <li><a href="#sports">Sports Wear</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h4 class="footer-title">Get in Touch</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>123 Fashion Street, Style City, SC 12345</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@flickbye.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Flick-Bye. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#cookies">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="shop.js"></script>
+    <script src="cart-simple.js"></script>
+    <script>
+    // Initialize cart badge on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.cartManager) {
+            cartManager.updateCartBadge();
+        } else {
+            const cart = JSON.parse(localStorage.getItem('fashionStoreCart') || '[]');
+            const itemCount = cart.reduce((total, item) => total + item.quantity, 0);
+            const badge = document.getElementById('cartCount');
+            if (badge) {
+                badge.textContent = itemCount;
+                badge.className = itemCount > 0 ? 'cart-count' : 'cart-count empty';
+            }
+        }
+    });
+    </script>
+</body>
+</html>
