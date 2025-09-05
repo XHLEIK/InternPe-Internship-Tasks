@@ -202,6 +202,35 @@ html {
     font-size: 16px;
 }
 
+/* Cart Badge */
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: linear-gradient(45deg, #dc3545, #e74c3c);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: cartPulse 2s infinite;
+    border: 2px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cart-count.empty {
+    display: none;
+}
+
+@keyframes cartPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
 /* Mobile Menu Toggle */
 .mobile-menu-toggle {
     display: none;
@@ -241,16 +270,64 @@ html {
 }
 
 /* ===============================================
-   HERO SECTION
+   HERO SECTION - SCROLLABLE OFFERS
    =============================================== */
 
 #hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #ff6b6b 100%);
     min-height: 100vh;
-    display: flex;
-    align-items: center;
     position: relative;
     overflow: hidden;
+}
+
+.hero-slider-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero-slides-wrapper {
+    display: flex;
+    width: 500%; /* 5 slides * 100% */
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-slide {
+    width: 20%; /* 100% / 5 slides */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-slide.active .hero-content {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.hero-slide.active .hero-image {
+    animation: slideInRight 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .hero-container {
@@ -262,6 +339,32 @@ html {
     margin: 0 auto;
     padding: 0 20px;
     z-index: 2;
+    height: 100%;
+}
+
+.offer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
 }
 
 .hero-content h4 {
@@ -286,12 +389,14 @@ html {
     font-weight: 800;
     margin-bottom: 20px;
     text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    line-height: 1.2;
 }
 
 .hero-content p {
     color: rgba(255, 255, 255, 0.8);
     font-size: 18px;
     margin-bottom: 30px;
+    line-height: 1.5;
 }
 
 .shop-now-btn {
@@ -308,6 +413,23 @@ html {
     gap: 10px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.shop-now-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.shop-now-btn:hover::before {
+    left: 100%;
 }
 
 .shop-now-btn:hover {
@@ -323,55 +445,39 @@ html {
     position: relative;
 }
 
-.model-carousel-container {
+.hero-img {
     width: 100%;
-    max-width: 400px;
-    height: 500px;
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.carousel-wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.model-carousel {
-    display: flex;
-    width: 500%;
-    height: 100%;
-    transition: transform 0.5s ease;
-}
-
-.model-card {
-    width: 20%;
-    height: 100%;
-}
-
-.model-img {
-    width: 100%;
-    height: 100%;
+    max-width: 500px;
+    height: 600px;
     object-fit: cover;
     border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
-.carousel-controls {
+.hero-img:hover {
+    transform: scale(1.02);
+}
+
+/* Navigation Arrows */
+.hero-nav-arrows {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 -30px;
-    transform: translateY(-50%);
+    padding: 0 30px;
+    pointer-events: none;
+    z-index: 10;
 }
 
-.carousel-btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    width: 40px;
-    height: 40px;
+.hero-arrow {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     color: white;
     cursor: pointer;
@@ -379,33 +485,66 @@ html {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
+    pointer-events: auto;
+    font-size: 18px;
 }
 
-.carousel-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
+.hero-arrow:hover {
+    background: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.carousel-indicators {
+.hero-arrow:active {
+    transform: scale(0.95);
+}
+
+/* Slide Indicators */
+.hero-indicators {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 8px;
+    gap: 12px;
+    z-index: 10;
 }
 
-.indicator {
-    width: 10px;
-    height: 10px;
+.hero-indicator {
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.4);
     cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.hero-indicator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0;
     transition: all 0.3s ease;
 }
 
-.indicator.active {
-    background: white;
+.hero-indicator.active {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.3);
+}
+
+.hero-indicator.active::before {
+    opacity: 1;
+}
+
+.hero-indicator:hover {
+    background: rgba(255, 255, 255, 0.6);
     transform: scale(1.2);
 }
 
@@ -1902,6 +2041,85 @@ html {
         visibility: visible;
     }
     
+    /* Hero Section Mobile Responsive */
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .hero-content {
+        order: 2;
+    }
+    
+    .hero-image {
+        order: 1;
+    }
+    
+    .hero-content h1 {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    
+    .hero-content h2 {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+    
+    .hero-content h4 {
+        font-size: 14px;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+    }
+    
+    .hero-content p {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    
+    .offer-badge {
+        font-size: 12px;
+        padding: 6px 12px;
+        margin-bottom: 12px;
+    }
+    
+    .shop-now-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+        gap: 8px;
+    }
+    
+    .hero-img {
+        max-width: 350px;
+        height: 400px;
+        margin: 0 auto;
+    }
+    
+    .hero-nav-arrows {
+        padding: 0 15px;
+    }
+    
+    .hero-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .hero-indicators {
+        bottom: 20px;
+        gap: 8px;
+    }
+    
+    .hero-indicator {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .hero-indicator.active {
+        transform: scale(1.2);
+    }
+    
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -2098,6 +2316,67 @@ html {
     /* Ensure mobile menu toggle is visible and properly sized */
     .mobile-menu-toggle {
         padding: 6px;
+    }
+    
+    /* Hero Section Very Small Mobile Responsive */
+    .hero-container {
+        padding: 15px;
+        gap: 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 28px;
+        line-height: 1.1;
+    }
+    
+    .hero-content h2 {
+        font-size: 20px;
+    }
+    
+    .hero-content h4 {
+        font-size: 12px;
+    }
+    
+    .hero-content p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    .offer-badge {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    
+    .shop-now-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+    
+    .hero-img {
+        max-width: 280px;
+        height: 320px;
+        border-radius: 15px;
+    }
+    
+    .hero-nav-arrows {
+        padding: 0 10px;
+    }
+    
+    .hero-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+    
+    .hero-indicators {
+        bottom: 15px;
+        gap: 6px;
+    }
+    
+    .hero-indicator {
+        width: 8px;
+        height: 8px;
     }
     
     .hamburger-line {
