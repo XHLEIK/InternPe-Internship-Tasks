@@ -142,117 +142,154 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', updateActiveOnScroll);
     
 // ===============================================
-// CLOTHING CAROUSEL FUNCTIONALITY
+// HERO OFFERS SLIDER FUNCTIONALITY
 // ===============================================
-    const carousel = document.getElementById('modelCarousel');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const indicators = document.getElementById('carouselIndicators');
-    const modelCards = document.querySelectorAll('.model-card');
-    const indicatorDots = document.querySelectorAll('.indicator');
+    const heroSlidesWrapper = document.getElementById('heroSlidesWrapper');
+    const heroPrevBtn = document.getElementById('heroPrevBtn');
+    const heroNextBtn = document.getElementById('heroNextBtn');
+    const heroIndicators = document.getElementById('heroIndicators');
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroIndicatorDots = document.querySelectorAll('.hero-indicator');
     
-    let currentSlide = 0;
-    const totalSlides = modelCards.length;
+    let currentHeroSlide = 0;
+    const totalHeroSlides = heroSlides.length;
     
-    // Function to update carousel position
-    function updateCarousel() {
-        const translateX = -currentSlide * (100 / totalSlides);
-        carousel.style.transform = `translateX(${translateX}%)`;
+    // Function to update hero slider position
+    function updateHeroSlider() {
+        const translateX = -currentHeroSlide * (100 / totalHeroSlides);
+        heroSlidesWrapper.style.transform = `translateX(${translateX}%)`;
         
         // Update active states
-        modelCards.forEach((card, index) => {
-            card.classList.toggle('active', index === currentSlide);
+        heroSlides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentHeroSlide);
         });
         
-        indicatorDots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlide);
+        heroIndicatorDots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentHeroSlide);
         });
     }
     
     // Next slide function
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateCarousel();
+    function nextHeroSlide() {
+        currentHeroSlide = (currentHeroSlide + 1) % totalHeroSlides;
+        updateHeroSlider();
     }
     
     // Previous slide function
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateCarousel();
+    function prevHeroSlide() {
+        currentHeroSlide = (currentHeroSlide - 1 + totalHeroSlides) % totalHeroSlides;
+        updateHeroSlider();
     }
     
     // Go to specific slide
-    function goToSlide(slideIndex) {
-        currentSlide = slideIndex;
-        updateCarousel();
+    function goToHeroSlide(slideIndex) {
+        currentHeroSlide = slideIndex;
+        updateHeroSlider();
     }
     
     // Event listeners for navigation buttons
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-    
-    // Event listeners for indicator dots
-    indicatorDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => goToSlide(index));
-    });
-    
-    // Auto-play functionality (optional)
-    let autoPlayInterval;
-    
-    function startAutoPlay() {
-        autoPlayInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
+    if (heroPrevBtn && heroNextBtn) {
+        heroPrevBtn.addEventListener('click', prevHeroSlide);
+        heroNextBtn.addEventListener('click', nextHeroSlide);
     }
     
-    function stopAutoPlay() {
-        clearInterval(autoPlayInterval);
+    // Event listeners for indicator dots
+    heroIndicatorDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToHeroSlide(index));
+    });
+    
+    // Auto-play functionality
+    let heroAutoPlayInterval;
+    
+    function startHeroAutoPlay() {
+        heroAutoPlayInterval = setInterval(nextHeroSlide, 5000); // Change slide every 5 seconds
+    }
+    
+    function stopHeroAutoPlay() {
+        clearInterval(heroAutoPlayInterval);
     }
     
     // Start auto-play
-    startAutoPlay();
+    startHeroAutoPlay();
     
     // Pause auto-play on hover
-    const carouselContainer = document.querySelector('.model-carousel-container');
-    carouselContainer.addEventListener('mouseenter', stopAutoPlay);
-    carouselContainer.addEventListener('mouseleave', startAutoPlay);
+    const heroSliderContainer = document.querySelector('.hero-slider-container');
+    if (heroSliderContainer) {
+        heroSliderContainer.addEventListener('mouseenter', stopHeroAutoPlay);
+        heroSliderContainer.addEventListener('mouseleave', startHeroAutoPlay);
+    }
     
-    // Keyboard navigation
+    // Keyboard navigation for hero slider
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowLeft') {
-            prevSlide();
-        } else if (e.key === 'ArrowRight') {
-            nextSlide();
-        }
-    });
-    
-    // Touch/swipe support for mobile
-    let startX, startY, distX, distY;
-    const threshold = 100; // Minimum distance for swipe
-    
-    carouselContainer.addEventListener('touchstart', function(e) {
-        startX = e.touches[0].clientX;
-        startY = e.touches[0].clientY;
-    });
-    
-    carouselContainer.addEventListener('touchmove', function(e) {
-        e.preventDefault(); // Prevent scrolling
-    });
-    
-    carouselContainer.addEventListener('touchend', function(e) {
-        distX = e.changedTouches[0].clientX - startX;
-        distY = e.changedTouches[0].clientY - startY;
-        
-        // Check if it's a horizontal swipe
-        if (Math.abs(distX) > Math.abs(distY) && Math.abs(distX) > threshold) {
-            if (distX > 0) {
-                prevSlide(); // Swipe right - go to previous
-            } else {
-                nextSlide(); // Swipe left - go to next
+        // Only handle arrow keys if we're not in an input field
+        if (document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+            if (e.key === 'ArrowLeft') {
+                prevHeroSlide();
+                stopHeroAutoPlay();
+                setTimeout(startHeroAutoPlay, 3000); // Restart after 3 seconds
+            } else if (e.key === 'ArrowRight') {
+                nextHeroSlide();
+                stopHeroAutoPlay();
+                setTimeout(startHeroAutoPlay, 3000); // Restart after 3 seconds
             }
         }
     });
     
-    // Initialize carousel
-    updateCarousel();
+    // Touch/swipe support for hero slider on mobile
+    let heroStartX, heroStartY, heroDistX, heroDistY;
+    const heroSwipeThreshold = 100; // Minimum distance for swipe
+    
+    if (heroSliderContainer) {
+        heroSliderContainer.addEventListener('touchstart', function(e) {
+            heroStartX = e.touches[0].clientX;
+            heroStartY = e.touches[0].clientY;
+            stopHeroAutoPlay(); // Stop auto-play during touch interaction
+        });
+        
+        heroSliderContainer.addEventListener('touchmove', function(e) {
+            // Only prevent default if it's a horizontal swipe
+            if (Math.abs(e.touches[0].clientX - heroStartX) > Math.abs(e.touches[0].clientY - heroStartY)) {
+                e.preventDefault(); // Prevent scrolling for horizontal swipes
+            }
+        });
+        
+        heroSliderContainer.addEventListener('touchend', function(e) {
+            heroDistX = e.changedTouches[0].clientX - heroStartX;
+            heroDistY = e.changedTouches[0].clientY - heroStartY;
+            
+            // Check if it's a horizontal swipe
+            if (Math.abs(heroDistX) > Math.abs(heroDistY) && Math.abs(heroDistX) > heroSwipeThreshold) {
+                if (heroDistX > 0) {
+                    prevHeroSlide(); // Swipe right - go to previous
+                } else {
+                    nextHeroSlide(); // Swipe left - go to next
+                }
+            }
+            
+            // Restart auto-play after touch interaction
+            setTimeout(startHeroAutoPlay, 2000);
+        });
+    }
+    
+    // Initialize hero slider
+    updateHeroSlider();
+    
+    // Add intersection observer for performance
+    if ('IntersectionObserver' in window) {
+        const heroObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startHeroAutoPlay();
+                } else {
+                    stopHeroAutoPlay();
+                }
+            });
+        });
+        
+        if (heroSliderContainer) {
+            heroObserver.observe(heroSliderContainer);
+        }
+    }
 });
 
 // ===============================================
@@ -425,21 +462,29 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.addEventListener('click', function(e) {
             e.stopPropagation();
             const productCard = this.closest('.product-card');
-            const productTitle = productCard.querySelector('.product-title').textContent;
-            const productPrice = productCard.querySelector('.current-price').textContent;
             
-            // Add visual feedback
-            this.style.transform = 'scale(0.9)';
-            this.style.background = 'rgba(46, 204, 113, 0.8)';
+            // Get product data
+            const productData = getProductDataFromElement(this);
             
-            setTimeout(() => {
-                this.style.transform = '';
-                this.style.background = '';
-            }, 300);
-            
-            // Show success message
-            showNotification(`${productTitle} added to cart! (${productPrice})`, 'success');
-            console.log('Added to cart:', productTitle, productPrice);
+            if (productData) {
+                // Add visual feedback
+                this.style.transform = 'scale(0.9)';
+                this.style.background = 'rgba(46, 204, 113, 0.8)';
+                
+                setTimeout(() => {
+                    this.style.transform = '';
+                    this.style.background = '';
+                }, 300);
+                
+                // Add to cart using global function
+                if (window.addToCart) {
+                    window.addToCart(productData);
+                } else {
+                    // Fallback notification
+                    showNotification(`${productData.name} added to cart! (₹${productData.price})`, 'success');
+                    console.log('Added to cart:', productData);
+                }
+            }
         });
     });
 
