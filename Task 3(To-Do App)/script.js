@@ -359,7 +359,7 @@ class TodoApp {
     updateProgress() {
         const total = this.tasks.length;
         const completed = this.tasks.filter(task => task.completed).length;
-        const percentage = total === 0 ? 0 : Math.round((completed / total) * 100);
+        const percentage = total === 0 ? 0 : Math.max(0, Math.min(100, Math.round((completed / total) * 100)));
 
         // Update progress circle
         const circumference = 283; // 2 * π * 45 (radius)
@@ -415,14 +415,32 @@ class TodoApp {
 
     animatePercentage(element, targetPercentage) {
         const currentPercentage = parseInt(element.textContent) || 0;
+        
+        // Ensure targetPercentage is within valid bounds
+        targetPercentage = Math.max(0, Math.min(100, targetPercentage));
+        
+        // If values are the same, no animation needed
+        if (currentPercentage === targetPercentage) {
+            element.textContent = `${targetPercentage}%`;
+            return;
+        }
+        
         const increment = targetPercentage > currentPercentage ? 1 : -1;
         const duration = 500; // ms
         const steps = Math.abs(targetPercentage - currentPercentage);
-        const stepDuration = steps === 0 ? 0 : duration / steps;
+        const stepDuration = steps === 0 ? 0 : Math.max(10, duration / steps); // Minimum 10ms per step
 
         let current = currentPercentage;
         const timer = setInterval(() => {
             current += increment;
+            
+            // Ensure current percentage stays within valid bounds (0-100)
+            if (increment > 0) {
+                current = Math.min(current, targetPercentage);
+            } else {
+                current = Math.max(0, Math.max(current, targetPercentage));
+            }
+            
             element.textContent = `${current}%`;
             
             if (current === targetPercentage) {
