@@ -2,7 +2,7 @@
 
 A beautiful, fully-featured to-do list application built with HTML, CSS, and JavaScript. This project showcases modern web development practices with a professional, responsive design.
 
-![To-Do App Preview](preview.png)
+
 
 ## 🌟 Features
 
